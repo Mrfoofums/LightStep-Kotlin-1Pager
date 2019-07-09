@@ -1,6 +1,5 @@
 package routes
 
-import com.lightstep.tracer.jre.JRETracer
 import io.javalin.Javalin
 import io.javalin.apibuilder.ApiBuilder.get
 import io.javalin.http.Context
@@ -56,7 +55,6 @@ class MoveDAO {
         "toprock" to Move("The Top Rock is all movement where the breaker is still standing. Set's are typically started with top rock.", "Rocking")
     )
     fun getMoveByName(moveName: String): Move {
-
         return moves.getValue(moveName)
     }
 }
